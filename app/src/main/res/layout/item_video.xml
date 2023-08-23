@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/videoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/thirdTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:alpha="0.4"
+                android:background="@color/black"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:text="23:23" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textVideoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="王国之泪最强盾牌，开荒神器"
+            android:textColor="@color/title_color"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/more"
+            app:layout_constraintStart_toEndOf="@id/image_container"
+            app:layout_constraintTop_toTopOf="@id/image_container" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="bottom"
+            android:lines="2"
+            android:textColor="@color/content_theme"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/more"
+            app:layout_constraintStart_toStartOf="@id/textVideoName"
+            app:layout_constraintTop_toBottomOf="@id/textVideoName"
+            tools:text="英明果断柠檬小丸子" />
+
+        <TextView
+            android:id="@+id/thirdTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="bottom"
+            android:lines="2"
+            android:textColor="@color/content_theme"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/more"
+            app:layout_constraintStart_toStartOf="@id/subTitle"
+            app:layout_constraintTop_toBottomOf="@id/subTitle"
+            tools:text="213.6万次播放 · 2020年02月02日" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/icon_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/gray" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
